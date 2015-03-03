@@ -6,7 +6,13 @@
 </form>
 
 <ul>
-  {{#each post in model}}
-    <li>{{post.text}}</li>
+  {{#each}}
+    <li {{action 'toggleDate'}}>
+      {{text}} - {{id}}
+      {{#if dateVisible}}
+        - {{date}}
+      {{/if}}
+    </li>
   {{/each}}
 </ul>
+<button class="btn btn-info" {{action 'sortByText'}}>sort</button>

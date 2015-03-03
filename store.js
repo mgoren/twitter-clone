@@ -5,7 +5,7 @@ posts = [
 },
 {
   id: '2',
-  text: ' Wayfarers Kickstarter mustache umami meh church-key artisan, drinking vinegar lomo normcore. Narwhal actually American Apparel paleo irony vinyl.idae.'
+  text: 'Wayfarers Kickstarter mustache umami meh church-key artisan, drinking vinegar lomo normcore. Narwhal actually American Apparel paleo irony vinyl.idae.'
 },
 {
   id: '3',
