@@ -1,6 +1,12 @@
-<h1>Rumbles</h1>
+<form id="rumble-form" class="form-inline" role="form">
+  <div class="form-group">
+    {{input id="rumble" class="form-control" value=text placeholder="What up?"}}
+  </div>
+  <button class="btn btn-primary" {{action 'addPost'}}>Rumble</button>
+</form>
+
 <ul>
   {{#each post in model}}
-  <li>{{post.text}}</li>
+    <li>{{post.text}}</li>
   {{/each}}
 </ul>

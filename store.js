@@ -1,4 +1,4 @@
-var posts = [
+posts = [
 {
   id: '1',
   text: 'Before they sold out ugh crucifix skateboard, vinyl viral banjo. Church-key Marfa Tumblr farm-to-table, slow-carb iPhone semiotics gluten-free Odd Future disrupt.'
