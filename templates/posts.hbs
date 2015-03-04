@@ -18,13 +18,14 @@
             <button class="btn btn-info" {{action 'addReply' post}}>Reply</button>
           </form>
 
-          {{#each reply in replies}}
-            <li>{{reply.reply}}</li>
+          {{#each reply in post.replies}}
+            <li>{{reply}}</li>
           {{/each}}
 
 
 
         {{/if}}
+
     </li>
   {{/each}}
 </ul>
