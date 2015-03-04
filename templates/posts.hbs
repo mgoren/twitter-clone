@@ -6,13 +6,43 @@
 </form>
 
 <ul>
-  {{#each}}
-    <li {{action 'toggleDate'}}>
-      {{text}} - {{id}}
-      {{#if dateVisible}}
-        - {{date}}
-      {{/if}}
+  {{#each post in sortedPosts itemController="post"}}
+    <li class ="well">
+        <p {{action 'postClicked'}}>{{post.text}}</p>
+        {{#if post.clicked}}
+        {{post.date}}
+          <form class="reply-form form-inline" role="form">
+            <div class="form-group">
+              {{input class="reply form-control" value=post.reply placeholder="reply"}}
+            </div>
+            <button class="btn btn-info" {{action 'addReply' post}}>Reply</button>
+          </form>
+
+          {{#each reply in replies}}
+            <li>{{reply.reply}}</li>
+          {{/each}}
+
+
+
+        {{/if}}
     </li>
   {{/each}}
 </ul>
-<button class="btn btn-info" {{action 'reverseSort'}}>reverse sort</button>
+
+<!-- <ul>
+  {{#each}}
+  <li class ="well">
+    <p {{action 'postClicked'}}>{{text}}</p>
+    {{#if clicked}}
+    {{date}}
+    <form class="reply-form form-inline" role="form">
+      <div class="form-group">
+        {{input class="reply form-control" value=reply placeholder="reply"}}
+      </div>
+      <button class="btn btn-info" {{action 'addReply' this}}>Reply</button>
+    </form>
+
+    {{/if}}
+  </li>
+  {{/each}}
+</ul> -->
